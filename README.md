@@ -35,12 +35,12 @@ Aplikasi **Shopping List** adalah aplikasi Flutter sederhana yang digunakan untu
 
 ## 🖼️ Screenshot Tampilan
 **1️⃣ Halaman Daftar Belanja (List View):**  
-![List View](screenshots/list_view.png)
+![List View](img/tampilan1.jpg)
 
 **2️⃣ Halaman Form Input:**  
-![Form Input](screenshots/form_input.png)
+![Form Input](img/tampilan2.jpg)
 
-*(Catatan: ganti nama file dan path sesuai screenshot kamu.)*
+
 
 ---
 
@@ -50,3 +50,37 @@ Dalam aplikasi ini, data item belanja disimpan menggunakan struktur data **List*
 Contoh implementasi:
 ```dart
 List<String> shoppingList = [];
+
+shoppingList.add(itemName);
+
+kemudian adata ditampilkan dengan listView.Builder
+ListView.builder(
+  itemCount: shoppingList.length,
+  itemBuilder: (context, index) {
+    return ListTile(
+      title: Text(shoppingList[index]),
+    );
+  },
+);
+
+🚀 Cara Menjalankan Proyek
+
+Clone repositori ini dari GitHub:
+
+git clone https://github.com/username/shopping_list_app.git
+
+
+Masuk ke folder proyek:
+
+cd shopping_list_app
+
+
+Jalankan perintah berikut untuk mengambil dependensi Flutter:
+
+flutter pub get
+
+
+Jalankan aplikasi di emulator atau perangkat fisik:
+
+flutter run
+
